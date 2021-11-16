@@ -80,7 +80,9 @@ function findEmployeeByFirstName(srcArray, firstName){
 // using allWagesFor, accumulate the value of all dates worked by the employee in the record used as context
 function calculatePayroll(records){
     const allPay = (records.map((empl) => {return allWagesFor(empl)}))
+    console.log(allPay)
     return allPay.reduce((acc, cv) => acc + cv)
+    
 }
 
 
